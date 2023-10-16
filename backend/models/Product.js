@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 // Define the product schema
 const productSchema = new mongoose.Schema({
-  _id: mongoose.ObjectId,
+  _id: String,
   CategoryName: String,
   name: String,
   img: String,
@@ -24,6 +24,6 @@ const productSchema = new mongoose.Schema({
 });
 
 // Create the Product model using the schema
-const Product = mongoose.model('Product', productSchema);
+const Product = mongoose.model('Product', productSchema, 'products');
 
-module.exports = Product;
+module.exports = Product; ``
